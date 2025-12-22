@@ -25,8 +25,7 @@ app.use('/api/movies', movieRoutes)
 app.use('/api/reviews', reviewRoutes)
 app.use('/api/users', userRoutes)
 
-// Global error handler
-// eslint-disable-next-line no-unused-vars
+
 app.use((err, req, res, next) => {
   console.error(err)
   const status = err.status || 500
@@ -45,5 +44,6 @@ connectToDatabase()
     console.error('Failed to connect to database', err)
     process.exit(1)
   })
+
 
 
