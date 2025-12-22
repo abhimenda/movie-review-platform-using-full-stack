@@ -5,7 +5,7 @@ import { requireAuth } from '../middleware/auth.js'
 
 const router = Router()
 
-// GET /api/reviews/:movieId
+
 router.get('/:movieId', async (req, res, next) => {
   try {
     const reviews = await Review.find({ movie: req.params.movieId })
@@ -15,7 +15,6 @@ router.get('/:movieId', async (req, res, next) => {
   } catch (err) { next(err) }
 })
 
-// POST /api/reviews/:movieId
 router.post('/:movieId', requireAuth, async (req, res, next) => {
   try {
     const { rating, text } = req.body
@@ -29,7 +28,7 @@ router.post('/:movieId', requireAuth, async (req, res, next) => {
       text,
     })
 
-    // Update aggregates
+   
     const stats = await Review.aggregate([
       { $match: { movie: movie._id } },
       { $group: { _id: '$movie', avgRating: { $avg: '$rating' }, count: { $sum: 1 } } },
@@ -45,5 +44,6 @@ router.post('/:movieId', requireAuth, async (req, res, next) => {
 })
 
 export default router
+
 
 
