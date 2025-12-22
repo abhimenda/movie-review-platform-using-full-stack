@@ -3,7 +3,7 @@ import Movie from '../models/Movie.js'
 
 const router = Router()
 
-// GET /api/movies
+
 router.get('/', async (req, res, next) => {
   try {
     const { search, genre, year, rating, page = 1, limit = 20 } = req.query
@@ -27,7 +27,7 @@ router.get('/', async (req, res, next) => {
   } catch (err) { next(err) }
 })
 
-// GET /api/movies/:id
+
 router.get('/:id', async (req, res, next) => {
   try {
     const movie = await Movie.findById(req.params.id)
@@ -37,5 +37,6 @@ router.get('/:id', async (req, res, next) => {
 })
 
 export default router
+
 
 
