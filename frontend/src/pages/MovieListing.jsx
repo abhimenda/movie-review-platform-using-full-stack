@@ -19,7 +19,7 @@ const MovieListing = () => {
   const filterMovies = () => {
     let filtered = movies
 
-    // Search filter
+  
     if (searchTerm) {
       filtered = filtered.filter(movie =>
         movie.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -27,19 +27,19 @@ const MovieListing = () => {
       )
     }
 
-    // Genre filter
+   
     if (selectedGenre) {
       filtered = filtered.filter(movie =>
         movie.genre.toLowerCase().includes(selectedGenre.toLowerCase())
       )
     }
 
-    // Year filter
+  
     if (selectedYear) {
       filtered = filtered.filter(movie => movie.year.toString() === selectedYear)
     }
 
-    // Rating filter
+ 
     if (minRating) {
       filtered = filtered.filter(movie => movie.rating >= parseFloat(minRating))
     }
@@ -72,10 +72,10 @@ const MovieListing = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <h1 className="text-3xl font-bold text-gray-900 mb-8">Browse Movies</h1>
 
-        {/* Search and Filters */}
+        {}
         <div className="bg-white rounded-lg shadow-md p-6 mb-8">
           <form onSubmit={handleSearch} className="space-y-4">
-            {/* Search Bar */}
+            {}
             <div>
               <label htmlFor="search" className="block text-sm font-medium text-gray-700 mb-2">
                 Search Movies
@@ -90,9 +90,9 @@ const MovieListing = () => {
               />
             </div>
 
-            {/* Filters Row */}
+            {}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              {/* Genre Filter */}
+              {}
               <div>
                 <label htmlFor="genre" className="block text-sm font-medium text-gray-700 mb-2">
                   Genre
@@ -110,7 +110,7 @@ const MovieListing = () => {
                 </select>
               </div>
 
-              {/* Year Filter */}
+              {}
               <div>
                 <label htmlFor="year" className="block text-sm font-medium text-gray-700 mb-2">
                   Year
@@ -128,7 +128,7 @@ const MovieListing = () => {
                 </select>
               </div>
 
-              {/* Rating Filter */}
+              {}
               <div>
                 <label htmlFor="rating" className="block text-sm font-medium text-gray-700 mb-2">
                   Minimum Rating
@@ -148,7 +148,7 @@ const MovieListing = () => {
               </div>
             </div>
 
-            {/* Action Buttons */}
+            {}
             <div className="flex flex-col sm:flex-row gap-4">
               <button type="submit" className="btn-primary">
                 Apply Filters
@@ -160,14 +160,14 @@ const MovieListing = () => {
           </form>
         </div>
 
-        {/* Results */}
+        {}
         <div className="mb-4">
           <p className="text-gray-600">
             Showing {filteredMovies.length} of {movies.length} movies
           </p>
         </div>
 
-        {/* Movies Grid */}
+        {}
         {filteredMovies.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {filteredMovies.map((movie) => (
@@ -191,4 +191,5 @@ const MovieListing = () => {
 }
 
 export default MovieListing
+
 
