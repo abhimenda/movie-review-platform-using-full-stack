@@ -33,15 +33,14 @@ const ReviewForm = () => {
 
     setSubmitting(true)
     
-    // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 1000))
     
-    // In a real app, you would submit to your backend here
+   
     console.log('Review submitted:', {
       movieId: parseInt(movieId),
       rating,
       text: reviewText,
-      userId: 1, // This would come from auth context
+      userId: 1,
       date: new Date().toISOString().split('T')[0]
     })
     
@@ -76,7 +75,7 @@ const ReviewForm = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {/* Back Button */}
+        {}
         <Link to={`/movie/${movieId}`} className="inline-flex items-center text-primary-600 hover:text-primary-700 mb-6">
           <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -88,7 +87,7 @@ const ReviewForm = () => {
           <h1 className="text-3xl font-bold text-gray-900 mb-2">Write a Review</h1>
           <p className="text-gray-600 mb-8">Share your thoughts about "{movie.title}"</p>
 
-          {/* Movie Info */}
+          {}
           <div className="flex items-center mb-8 p-4 bg-gray-50 rounded-lg">
             <img
               src={movie.poster || '/placeholder-movie.jpg'}
@@ -105,7 +104,7 @@ const ReviewForm = () => {
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-6">
-            {/* Rating */}
+            {}
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-3">
                 Your Rating *
@@ -121,7 +120,7 @@ const ReviewForm = () => {
               </p>
             </div>
 
-            {/* Review Text */}
+            {}
             <div>
               <label htmlFor="review" className="block text-sm font-medium text-gray-700 mb-2">
                 Your Review *
@@ -139,7 +138,7 @@ const ReviewForm = () => {
               </p>
             </div>
 
-            {/* Tips */}
+            {}
             <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
               <h4 className="font-semibold text-blue-900 mb-2">Review Tips</h4>
               <ul className="text-sm text-blue-800 space-y-1">
@@ -150,7 +149,7 @@ const ReviewForm = () => {
               </ul>
             </div>
 
-            {/* Submit Buttons */}
+            {}
             <div className="flex flex-col sm:flex-row gap-4">
               <button
                 type="submit"
@@ -181,4 +180,5 @@ const ReviewForm = () => {
 }
 
 export default ReviewForm
+
 
