@@ -23,7 +23,7 @@ const Navbar = () => {
             </Link>
           </div>
 
-          {/* Desktop Navigation */}
+          {}
           <div className="hidden md:flex items-center space-x-8">
             <Link to="/" className="text-gray-700 hover:text-primary-600 px-3 py-2 rounded-md text-sm font-medium">
               Home
@@ -36,7 +36,7 @@ const Navbar = () => {
             </Link>
           </div>
 
-          {/* Search Bar */}
+          {}
           <div className="hidden md:flex items-center">
             <form onSubmit={handleSearch} className="flex">
               <input
@@ -51,7 +51,7 @@ const Navbar = () => {
             </form>
           </div>
 
-          {/* Mobile menu button */}
+          {}
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -64,7 +64,7 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Mobile menu */}
+        {}
         {isMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
@@ -97,4 +97,5 @@ const Navbar = () => {
 }
 
 export default Navbar
+
 
