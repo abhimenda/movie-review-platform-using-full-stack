@@ -28,7 +28,7 @@ const Profile = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {/* Profile Header */}
+        {}
         <div className="bg-white rounded-lg shadow-md p-8 mb-8">
           <div className="flex flex-col md:flex-row items-center md:items-start">
             <div className="w-32 h-32 bg-primary-100 rounded-full flex items-center justify-center mb-6 md:mb-0 md:mr-8">
@@ -53,7 +53,7 @@ const Profile = () => {
                 Member since {formatDate(user.joinDate)}
               </p>
               
-              {/* Stats */}
+              {}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
                 <div className="text-center">
                   <div className="text-2xl font-bold text-primary-600">{user.reviewCount}</div>
@@ -69,7 +69,7 @@ const Profile = () => {
                 </div>
               </div>
 
-              {/* Favorite Genres */}
+              {}
               <div>
                 <h3 className="font-semibold text-gray-700 mb-2">Favorite Genres</h3>
                 <div className="flex flex-wrap gap-2">
@@ -88,7 +88,7 @@ const Profile = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {/* Recent Reviews */}
+          {}
           <div className="bg-white rounded-lg shadow-md p-6">
             <div className="flex justify-between items-center mb-6">
               <h2 className="text-2xl font-bold text-gray-900">Recent Reviews</h2>
@@ -140,7 +140,7 @@ const Profile = () => {
             )}
           </div>
 
-          {/* Liked Movies */}
+          {}
           <div className="bg-white rounded-lg shadow-md p-6">
             <div className="flex justify-between items-center mb-6">
               <h2 className="text-2xl font-bold text-gray-900">Liked Movies</h2>
@@ -191,7 +191,7 @@ const Profile = () => {
           </div>
         </div>
 
-        {/* Edit Profile Button */}
+        {}
         <div className="mt-8 text-center">
           <button className="btn-secondary">
             Edit Profile
@@ -203,4 +203,5 @@ const Profile = () => {
 }
 
 export default Profile
+
 
